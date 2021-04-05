@@ -16,13 +16,6 @@ export interface State {
     pause: boolean;
 }
 
-const hasSymbol =
-    typeof Symbol !== 'undefined' && typeof Symbol('x') === 'symbol';
-
-export const DRAFT_STATE: unique symbol = hasSymbol
-    ? Symbol.for('state')
-    : ('state' as any);
-
 export const descriptors: { [prop: string]: PropertyDescriptor } = {};
 
 export const errors = {
