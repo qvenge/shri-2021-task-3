@@ -6,7 +6,7 @@ interface ExtendedWindow extends Window {
     renderTemplate: (alias: string, data: object) => string 
 }
 
-declare var window: ExtendedWindow;
+declare const window: ExtendedWindow;
 
 function ready() {
     window.postMessage('load', '*');
