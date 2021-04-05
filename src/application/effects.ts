@@ -31,7 +31,7 @@ export function createEffects(
                 case 'restart':
                     return of(actionRestart());
                 case 'update':
-                    const data: Partial<Slide> = JSON.parse(a.params);
+                    const data = JSON.parse(a.params) as Partial<Slide>;
                     return of(actionUpdate(data));
                 default:
                     return EMPTY;
